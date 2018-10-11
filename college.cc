@@ -4,6 +4,12 @@
 //CS 2401
 //10/8/2015
 //********************
+
+/**\file
+ * @Brief This file contains operator overrides and mathmatical computations
+ * @Author Matthew Aberegg
+ */
+
 #include "college.h"
 #include<cstdlib>
 #include<iostream>
@@ -44,6 +50,11 @@ College::College(const College& other){
 	}
 }
 
+/**
+ * @Brief = operator overload
+ * @Param Pointer to other
+ * @Returns Returns pointer to this
+ */
 College& College::operator =(const College& other){
 	if(this == &other){
 		return * this;
@@ -68,6 +79,12 @@ College& College::operator =(const College& other){
 	}
 	return * this;
 }
+
+/**
+ * @brief Adds a new course to the link
+ * @param Pointer to c
+ * @Returns Nothing returned
+ */
 
 void College::add(course& c){
 	node * previous;

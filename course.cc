@@ -3,6 +3,12 @@
 	course.
 		John Dolan		School of EECS		Summer2013
 **************************************************************************/
+
+/**\file
+ * @brief Implementation for course.h that describes a college course
+ * @author John Dolan
+ */
+
 #include "course.h"
 #include<cstdlib>
 #include<iostream>
@@ -14,8 +20,13 @@ course::course(){
     hours = 0.0;
 }
 
+/**
+ * @brief This takes input from either a file or the user
+ * @param Pointer to ins
+ * @return Returns nothing
+ */
 void course::input(std::istream& ins){
-    if(ins == cin){
+    if(&ins == &cin){
 	cout<<"Course Number: ";
 	if(ins.peek() == '\n') ins.ignore();
     	getline(ins, course_number);
@@ -39,8 +50,14 @@ void course::input(std::istream& ins){
     }
 }
 
+/**
+ * @brief This function displays output to the user
+ * @param Pointer to outs
+ * @return Returns nothing
+ */
+
 void course::output(std::ostream& outs)const{
-    if(outs == cout){
+    if(&outs == &cout){
 	outs<<"Course Number:"<<course_number<<endl;
 	outs<<"Grade received:"<<grade<<endl;
 	outs<<"Credit hours:"<<setprecision(2)<<hours<<endl;

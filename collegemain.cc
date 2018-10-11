@@ -12,6 +12,10 @@
 	John Dolan			Spring 2015
 **********************************************************/
 
+/**\file
+ * @brief this file contains the main that starts the program
+ * @author John Dolan
+ */
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -24,6 +28,9 @@ using namespace std;
 // This function displays the menu and returns the user's choice
 int menu();
 
+/**
+ * @brief This is the main that starts the program
+ */
 int main(){
     int choice;
     course c;
@@ -100,6 +107,12 @@ int main(){
 
 return 0;
 }
+
+/**
+ * @brief This displays a menu when prompted
+ * @param None
+ * @return Returns choice
+ */
 
 int menu(){
     int choice;
