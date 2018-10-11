@@ -4,7 +4,7 @@ CFLAGS=-g -Wall
 DOXCONFIG=Doxyfile
 
 #Build, archive, document code
-all: build archive doc
+all: build doczip doc
 
 build: college
 
